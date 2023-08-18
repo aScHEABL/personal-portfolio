@@ -12,8 +12,8 @@ import {
 export default function Intro() {
     return (
         <>
-            <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
-                <Container size="20rem">
+            <MediaQuery query="(max-width: 767px) and (min-width: 359px)" styles={{ display: 'block' }}>
+                <Container size="20rem" sx={{ display: 'none' }}>
                     <Title order={1} size="3.5rem">Hi, I'm Eric Trager.</Title>
                     <Title order={2} size="1.3rem" mb={48}>Student // Self-taught web developer</Title>
                     <Text>I am a third-year student studying Information Management 
@@ -24,8 +24,8 @@ export default function Intro() {
                     HTML/CSS, Python, Node.js, MongoDB and more.</Text>
                 </Container>
             </MediaQuery>
-            <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-                <Container size="100rem" px="1rem">
+            <MediaQuery query="(max-width: 992px) and (min-width: 768px)" styles={{ display: 'block' }}>
+                <Container size="100rem" pl="1rem" pr="10rem" sx={{ display: 'none' }}>
                     <Title order={1} size={70}>Hi, I'm Eric Trager.</Title>
                     <Title order={2} size={20} mb={48}>Student // Self-taught web developer</Title>
                     <Flex wrap="wrap">
