@@ -22,8 +22,11 @@ export default function Intro() {
                         at <Anchor href="https://www.ntub.edu.tw/" target="_blank">NTUB</Anchor>. 
                     Currently, I work as a MIS engineer intern
                     at <Anchor href="https://www.feg.com.tw/en/home/index.aspx" target="_blank">Far Eastern Group</Anchor>.</Text>
-                    <Text size={20}>I develop quality frontend and backend applications and tools using Typescript, React, 
+                    <Text size={20} pb={20}>I develop quality frontend and backend applications and tools using Typescript, React, 
                     HTML/CSS, Python, Node.js, MongoDB and more.</Text>
+                    <Button radius="md" size="lg">
+                        MY RESUME
+                    </Button>
                 </Container>
                 {/* for tablet devices */}
             </MediaQuery>
@@ -31,13 +34,16 @@ export default function Intro() {
                 <Container size="100rem" pl="2rem" pr="6rem" sx={{ display: 'none' }}>
                     <Title order={1} size={70}>Hi, I'm Eric Trager.</Title>
                         <Title order={2} size={20} mb={48}>Student // Self-taught web developer</Title>
-                        <Flex wrap="wrap">
+                        <Flex wrap="wrap" gap={20}>
                             <Text size={18} styles={{ flex: "1 1 100%" }}>I am a third-year student studying Information Management 
                                 at <Anchor href="https://www.ntub.edu.tw/" target="_blank">NTUB</Anchor>. 
                             Currently, I work as a MIS engineer intern
                             at <Anchor href="https://www.feg.com.tw/en/home/index.aspx" target="_blank">Far Eastern Group</Anchor>.</Text>
                             <Text size={18} styles={{ flex: "1 1 100%" }}>I develop quality frontend and backend applications and tools using Typescript, React, 
                             HTML/CSS, Python, Node.js, MongoDB and more.</Text>
+                            <Button radius="md" size="lg">
+                                MY RESUME
+                            </Button>
                         </Flex>
                 </Container>
                 {/* for laptop devices */}
@@ -46,13 +52,16 @@ export default function Intro() {
                 <Container size="100rem" pl="4rem" pr="8rem" sx={{ display: 'none' }}>
                     <Title order={1} size={70}>Hi, I'm Eric Trager.</Title>
                     <Title order={2} size={20} mb={48}>Student // Self-taught web developer</Title>
-                    <Flex wrap="wrap">
+                    <Flex wrap="wrap" gap={20}>
                         <Text size={18} styles={{ flex: "1 1 100%" }}>I am a third-year student studying Information Management 
                             at <Anchor href="https://www.ntub.edu.tw/" target="_blank">NTUB</Anchor>. 
                         Currently, I work as a MIS engineer intern
                         at <Anchor href="https://www.feg.com.tw/en/home/index.aspx" target="_blank">Far Eastern Group</Anchor>.</Text>
                         <Text size={18} styles={{ flex: "1 1 100%" }}>I develop quality frontend and backend applications and tools using Typescript, React, 
                         HTML/CSS, Python, Node.js, MongoDB and more.</Text>
+                        <Button radius="md" size="xl">
+                                MY RESUME
+                        </Button>
                     </Flex>
                 </Container>
             </MediaQuery>
@@ -69,7 +78,7 @@ export default function Intro() {
                             <Text size={24} mr={500} my={20}>I develop quality frontend and backend applications and tools using Typescript, React, 
                             HTML/CSS, Python, Node.js, MongoDB and more.</Text>
                             <Button radius="md" size="xl">
-                                CONTACT ME
+                                MY RESUME
                             </Button>
                         </Box>
                 </Container>
