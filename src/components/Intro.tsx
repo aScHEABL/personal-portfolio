@@ -20,7 +20,7 @@ export default function Intro() {
                     <Title order={2} size="1.3rem" mb={48}>Student // Self-taught web developer</Title>
                     <Text size={20} pb={20}>I am a third-year student studying Information Management 
                         at <Anchor href="https://www.ntub.edu.tw/" target="_blank">NTUB</Anchor>. 
-                    Currently, I work as a MIS engineer intern
+                    Currently, I work as a MIS intern
                     at <Anchor href="https://www.feg.com.tw/en/home/index.aspx" target="_blank">Far Eastern Group</Anchor>.</Text>
                     <Text size={20} pb={20}>I develop quality frontend and backend applications and tools using Typescript, React, 
                     HTML/CSS, Python, Node.js, MongoDB and more.</Text>
@@ -37,7 +37,7 @@ export default function Intro() {
                         <Flex wrap="wrap" gap={20}>
                             <Text size={18} styles={{ flex: "1 1 100%" }}>I am a third-year student studying Information Management 
                                 at <Anchor href="https://www.ntub.edu.tw/" target="_blank">NTUB</Anchor>. 
-                            Currently, I work as a MIS engineer intern
+                            Currently, I work as a MIS intern
                             at <Anchor href="https://www.feg.com.tw/en/home/index.aspx" target="_blank">Far Eastern Group</Anchor>.</Text>
                             <Text size={18} styles={{ flex: "1 1 100%" }}>I develop quality frontend and backend applications and tools using Typescript, React, 
                             HTML/CSS, Python, Node.js, MongoDB and more.</Text>
@@ -55,7 +55,7 @@ export default function Intro() {
                     <Flex wrap="wrap" gap={20}>
                         <Text size={18} styles={{ flex: "1 1 100%" }}>I am a third-year student studying Information Management 
                             at <Anchor href="https://www.ntub.edu.tw/" target="_blank">NTUB</Anchor>. 
-                        Currently, I work as a MIS engineer intern
+                        Currently, I work as a MIS intern
                         at <Anchor href="https://www.feg.com.tw/en/home/index.aspx" target="_blank">Far Eastern Group</Anchor>.</Text>
                         <Text size={18} styles={{ flex: "1 1 100%" }}>I develop quality frontend and backend applications and tools using Typescript, React, 
                         HTML/CSS, Python, Node.js, MongoDB and more.</Text>
@@ -73,7 +73,7 @@ export default function Intro() {
                         <Box>
                             <Text size={24} mr={500}>I am a third-year student studying Information Management 
                                 at <Anchor href="https://www.ntub.edu.tw/" target="_blank">NTUB</Anchor>. 
-                            Currently, I work as a MIS engineer intern
+                            Currently, I work as a MIS intern
                             at <Anchor href="https://www.feg.com.tw/en/home/index.aspx" target="_blank">Far Eastern Group</Anchor>.</Text>
                             <Text size={24} mr={500} my={20}>I develop quality frontend and backend applications and tools using Typescript, React, 
                             HTML/CSS, Python, Node.js, MongoDB and more.</Text>
