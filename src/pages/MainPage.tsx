@@ -42,7 +42,7 @@ export default function MainPage() {
                 {/* I could pass down objects as prop and render projects as list */}
                 {/* <ProjectsShowcase /> */}
                 {/* ProjectsShowcase needs a re-work */}
-                <Showcase projects={ projects } />
+                {/* <Showcase projects={ projects } /> */}
             </Box>
     )
 }
