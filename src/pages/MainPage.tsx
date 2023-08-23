@@ -13,11 +13,12 @@ export default function MainPage() {
             <Box>
                 <Sidebar />
                 <Intro />
-                <CustomDivider />
+                <CustomDivider dividerLabel={"Some things I've built"} />
                 {/* I could pass down objects as prop and render projects as list */}
                 {/* <ProjectsShowcase /> */}
                 {/* ProjectsShowcase needs a re-work */}
                 <Showcase />
+                <CustomDivider dividerLabel={"Some of my work experience"} />
             </Box>
     )
 }
