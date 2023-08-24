@@ -10,8 +10,8 @@ import { v4 as uuid } from "uuid";
 const job_array = [
 {
     company: "Far Eastern Group",
-    jobTitle: "MIS intern, Help desk",
-    date: "Sep 2022 - Present"
+    title: "MIS intern, Help desk",
+    durationDate: "Sep 2022 - Present"
 },
 ]
 
@@ -22,7 +22,7 @@ export default function WorkExperience() {
                 job_array.map((job) => {
                     return (
                         <>
-                            <MediaQuery query="(max-width: 425px) and (min-width: 300px)" styles={{ display: 'block' }}>
+                            <MediaQuery query="(max-width: 424px) and (min-width: 300px)" styles={{ display: 'block' }}>
                                 <Flex p={20} key={uuid()} wrap="wrap" 
                                 sx={(theme) => ({
                                     display: 'none', 
@@ -33,16 +33,24 @@ export default function WorkExperience() {
                                         {job.company}
                                     </Title>
                                     <Text pb={8}>
-                                        {job.date}
+                                        {job.durationDate}
                                     </Text>
                                     <Title order={4} size={18}>
-                                        {job.jobTitle}
+                                        {job.title}
                                     </Title>
                                 </Flex>
                             </MediaQuery>
-                            <MediaQuery query="(max-width: 767px) and (min-width: 424px)" styles={{ display: 'block' }}>
-                                <Flex p={20} key={uuid()} wrap="wrap">
-                                    
+                            <MediaQuery query="(max-width: 2560px) and (min-width: 426px)" styles={{ display: 'block' }}>
+                                <Flex justify="center" px={40} key={uuid()} wrap="wrap" sx={{ display: 'none' }}>
+                                    <Flex justify="space-between" align="center">
+                                        <Title order={3}>
+                                            {job.company}
+                                        </Title>
+                                        <Text>
+                                            {job.durationDate}
+                                        </Text>
+                                    </Flex>
+                                    <Title order={4}>{job.title}</Title>
                                 </Flex>
                             </MediaQuery>
                         </>
