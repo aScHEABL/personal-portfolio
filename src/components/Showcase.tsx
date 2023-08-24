@@ -6,10 +6,7 @@ import { Container,
     Anchor, 
     Image,
     Box,
-    ColorScheme,
 } from "@mantine/core";
-import { useLocalStorage, useColorScheme } from "@mantine/hooks";
-import { useEffect } from "react";
 import { v4 as uuid } from "uuid";
 import tasterTheBakery_img from "../assets/Screenshot_20230630_093002.png";
 import weatherApp_img from "../assets/Screenshot-2022-11-22.png";
