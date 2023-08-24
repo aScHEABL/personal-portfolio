@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, ReactNode, useState } from "react";
+import React, { createContext, useReducer, ReactNode } from "react";
 
 interface State {
     preferedColorScheme: string

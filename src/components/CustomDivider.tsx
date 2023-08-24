@@ -1,7 +1,11 @@
 import { Divider, Text, Flex } from '@mantine/core';
 import { LiaToolsSolid } from "react-icons/lia"
 
-export default function CustomDivider({ dividerLabel }) {
+interface dividerLabelProps {
+    [key: string]: string,
+}
+
+export default function CustomDivider({ dividerLabel }: dividerLabelProps) {
     return (
         <>
             <Divider 

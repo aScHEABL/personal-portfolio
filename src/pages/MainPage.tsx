@@ -1,11 +1,9 @@
-import React from "react";
 import { 
   Box,
  } from '@mantine/core';
 import Intro from "../components/Intro";
 import Sidebar from "../components/Sidebar";
 import CustomDivider from "../components/CustomDivider";
-import ProjectsShowcase from "../components/ProjectsShowcase";
 import Showcase from "../components/Showcase";
 import WorkExperience from "../components/WorkExperience";
 

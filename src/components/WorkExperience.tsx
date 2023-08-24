@@ -1,4 +1,4 @@
-import { Box, Flex, Title, Text } from "@mantine/core";
+import { Box, Title } from "@mantine/core";
 
 const job_array = [
 {

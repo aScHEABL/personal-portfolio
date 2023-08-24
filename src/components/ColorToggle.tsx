@@ -1,7 +1,6 @@
-import React, { useState, useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Switch, Group, useMantineColorScheme, useMantineTheme } from '@mantine/core';
 import { IconSun, IconMoonStars } from '@tabler/icons-react';
-import { AppContext } from '../AppContext';
 
 export default function ColorToggle() {
   // const { state, dispatch } = useContext(AppContext);

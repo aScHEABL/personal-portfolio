@@ -1,8 +1,6 @@
-import React, { useEffect, useState, useContext } from "react";
 import { MantineProvider, 
   ColorSchemeProvider, 
   ColorScheme,
-  Container
 } from '@mantine/core';
 import { useHotkeys, useLocalStorage, useColorScheme } from '@mantine/hooks';
 import MainPage from "./pages/MainPage";

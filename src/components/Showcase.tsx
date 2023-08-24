@@ -68,7 +68,7 @@ export default function Showcase() {
                                 return (
                                     <Flex key={uuid()} px={20} py={40} rowGap={20}>
                                         <Box sx={{
-                                            zIndex: "1",
+                                            zIndex: 1,
                                             position: "relative",
                                             left: "4em",
                                         }}>
@@ -100,10 +100,11 @@ export default function Showcase() {
                                         alt={project.img.alt}
                                         />
                                         <Box sx={{
-                                            zIndex: "1",
+                                            zIndex: 1,
                                             position: "relative",
                                             right: "4em"
-                                        }}>
+                                        }}
+                                        >
                                             <Title align="right">
                                                 {project.name}
                                             </Title>
