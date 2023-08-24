@@ -9,6 +9,9 @@ import { Container,
 
 } from "@mantine/core";
 import { v4 as uuid } from "uuid";
+import tasterTheBakery_img from "../assets/Screenshot_20230630_093002.png";
+import weatherApp_img from "../assets/Screenshot-2022-11-22.png";
+import toDoList_img from "../assets/Screenshot 2023-08-21 at 11.26.39 PM.png"
 
 const projects = [
     {
@@ -17,7 +20,7 @@ const projects = [
         <Anchor href="https://tasters.imweb.me/">&nbsp;吃吃看Tasters</Anchor> 
         &nbsp;at the request of the business owner</div>,
         img: {
-            src: "src/assets/Screenshot_20230630_093002.png",
+            src: tasterTheBakery_img,
             alt: "a screenshot of a bakery website",
         }
     },
@@ -25,7 +28,7 @@ const projects = [
         name: "Weather App",
         desc: <div>A polish and sleek web app that displays current weather for any given city/region</div>,
         img: {
-            src: "src/assets/Screenshot-2022-11-22.PNG",
+            src: weatherApp_img,
             alt: "a screenshot of weather web app",
         }
     },
@@ -33,7 +36,7 @@ const projects = [
         name: "To do list app",
         desc: <div>A to do list web app that let you add and edit task, dragging tasks and move them between the columns.</div>,
         img: {
-            src: "src/assets/Screenshot 2023-08-21 at 11.26.39 PM.png",
+            src: toDoList_img,
             alt: "a screenshot of to do list app"
         }
     },
