@@ -6,14 +6,16 @@ import { Container,
     Anchor, 
     Image,
     Box,
-
+    ColorScheme,
 } from "@mantine/core";
+import { useLocalStorage, useColorScheme } from "@mantine/hooks";
+import { useEffect } from "react";
 import { v4 as uuid } from "uuid";
 import tasterTheBakery_img from "../assets/Screenshot_20230630_093002.png";
 import weatherApp_img from "../assets/Screenshot-2022-11-22.png";
 import toDoList_img from "../assets/Screenshot 2023-08-21 at 11.26.39 PM.png"
 
-const projects = [
+const projects_array = [
     {
         name: "Taster the bakery",
         desc: <div>This is an improved website from 
@@ -43,12 +45,20 @@ const projects = [
 ]
 
 export default function Showcase() {
+    const preferredColorScheme = useColorScheme();
+    const [colorScheme] = useLocalStorage<ColorScheme>({
+        key: 'color-scheme',
+        defaultValue: preferredColorScheme
+    })
+    useEffect(() => {
+        console.log(colorScheme);
+    })
     return (
         <>
             {/* for both mobile & talbet devices */}
             <MediaQuery query="(max-width: 1024px) and (min-width: 300px)" styles={{ display: 'block' }}>
                 <Container sx={{ display: 'none' }}>
-                    {projects.map((project) => {
+                    {projects_array.map((project) => {
                         return (
                             <Flex key={uuid()} wrap="wrap" px={20} py={40} rowGap={20}>
                                 <Title>{project.name}</Title>
@@ -66,7 +76,7 @@ export default function Showcase() {
             </MediaQuery>
             <MediaQuery query="(max-width: 2560px) and (min-width: 1024px)" styles={{ display: 'block' }}>
                     <Container size="110rem" px={100} sx={{ display: 'none' }}>
-                        {projects.map((project, index) => {
+                        {projects_array.map((project, index) => {
                             if (index % 2 === 1) {
                                 return (
                                     <Flex key={uuid()} px={20} py={40} rowGap={20}>
@@ -81,7 +91,7 @@ export default function Showcase() {
                                             <Box sx={(theme) => ({
                                                 margin: "1em 0 0 0",
                                                 padding: "1em 1em 1em 1em",
-                                                backgroundColor: theme.colors.gray[8],
+                                                backgroundColor: colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8],
                                                 borderRadius: "6px"
                                             })}>
                                                 <Text size={20} p={12}>
@@ -114,7 +124,7 @@ export default function Showcase() {
                                             <Box sx={(theme) => ({
                                                 margin: "1em 0 0 0",
                                                 padding: "1em 1em 1em 1em",
-                                                backgroundColor: theme.colors.gray[8],
+                                                backgroundColor: colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8],
                                                 borderRadius: "6px"
                                             })}>
                                                 <Text size={20} p={12}>

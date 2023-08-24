@@ -1,4 +1,5 @@
 import { Box, Title } from "@mantine/core";
+import { v4 as uuid } from "uuid";
 
 const job_array = [
 {
@@ -14,7 +15,7 @@ export default function WorkExperience() {
             {
                 job_array.map((job) => {
                     return (
-                        <Box>
+                        <Box key={uuid()}>
                             <Title>{job.company}</Title>
                         </Box>
                     )
