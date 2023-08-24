@@ -45,14 +45,7 @@ const projects_array = [
 ]
 
 export default function Showcase() {
-    const preferredColorScheme = useColorScheme();
-    const [colorScheme] = useLocalStorage<ColorScheme>({
-        key: 'color-scheme',
-        defaultValue: preferredColorScheme
-    })
-    useEffect(() => {
-        console.log(colorScheme);
-    })
+
     return (
         <>
             {/* for both mobile & talbet devices */}
@@ -91,7 +84,7 @@ export default function Showcase() {
                                             <Box sx={(theme) => ({
                                                 margin: "1em 0 0 0",
                                                 padding: "1em 1em 1em 1em",
-                                                backgroundColor: colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8],
+                                                backgroundColor: theme.colorScheme === "light" ? theme.colors.gray[0] : theme.colors.gray[8],
                                                 borderRadius: "6px"
                                             })}>
                                                 <Text size={20} p={12}>
@@ -124,7 +117,7 @@ export default function Showcase() {
                                             <Box sx={(theme) => ({
                                                 margin: "1em 0 0 0",
                                                 padding: "1em 1em 1em 1em",
-                                                backgroundColor: colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8],
+                                                backgroundColor: theme.colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8],
                                                 borderRadius: "6px"
                                             })}>
                                                 <Text size={20} p={12}>
