@@ -13,7 +13,7 @@ const introText = {
     schoolLink: <Anchor href="https://www.ntub.edu.tw/" target="_blank">NTUB</Anchor>,
     companyLink: <Anchor href="https://www.feg.com.tw/en/home/index.aspx" target="_blank">Far Eastern Group</Anchor>,
     skills: ["Typescript", "React", "HTML/CSS", "Python", "Node.js", "MongoDB"],
-    title: "Hi, I'm Eric Trager.",
+    title: "Hi, I'm Eric.",
     subTitle: "Student // Self-taught web developer",
     firstPara: function() {
         return (
@@ -35,10 +35,13 @@ export default function Intro() {
             {/* for phone devices */}
             <MediaQuery query="(max-width: 425px) and (min-width: 300px)" styles={{ display: 'block' }}>
                 <Container size="20rem" sx={{ display: 'none' }}>
-                    <Title order={1} size="3.5rem">
+                    <Title order={1} size={40} 
+                    sx={(theme) => ({
+                        color: theme.colorScheme === "light" ? theme.colors.black : theme.colors.white
+                    })}>
                         {introText.title}
                     </Title>
-                    <Title order={2} size="1.3rem" mb={48}>
+                    <Title order={2} size="1.3rem" mb={25}>
                         {introText.subTitle}
                     </Title>
                     <Text size={20} pb={20}>
@@ -55,7 +58,7 @@ export default function Intro() {
             </MediaQuery>
             <MediaQuery query="(max-width: 767px) and (min-width: 424px)" styles={{ display: 'block' }}>
                 <Container size="100rem" pl="2rem" pr="6rem" sx={{ display: 'none' }}>
-                    <Title order={1} size={70}>
+                    <Title order={1} size={35}>
                         {introText.title}
                     </Title>
                     <Title order={2} size={20} mb={48}>
