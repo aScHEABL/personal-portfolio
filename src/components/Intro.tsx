@@ -56,7 +56,7 @@ export default function Intro() {
                 </Container>
                 {/* for tablet devices */}
             </MediaQuery>
-            <MediaQuery query="(max-width: 767px) and (min-width: 424px)" styles={{ display: 'block' }}>
+            <MediaQuery query="(max-width: 767px) and (min-width: 426px)" styles={{ display: 'block' }}>
                 <Container size="100rem" pl="2rem" pr="6rem" sx={{ display: 'none' }}>
                     <Title order={1} size={35}>
                         {introText.title}
