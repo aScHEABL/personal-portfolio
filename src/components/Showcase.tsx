@@ -50,7 +50,7 @@ export default function Showcase() {
                 <Container sx={{ display: 'none' }}>
                     {projects_array.map((project) => {
                         return (
-                            <Flex key={uuid()} wrap="wrap" px={20} py={40} rowGap={20}>
+                            <Flex key={uuid()} wrap="wrap" px={20} py={40} rowGap={20} justify="center">
                                 <Title>{project.name}</Title>
                                 <Text size={20}>
                                     {project.desc}
@@ -81,7 +81,7 @@ export default function Showcase() {
                                             <Box sx={(theme) => ({
                                                 margin: "1em 0 0 0",
                                                 padding: "1em 1em 1em 1em",
-                                                backgroundColor: theme.colorScheme === "light" ? theme.colors.gray[0] : theme.colors.gray[8],
+                                                backgroundColor: theme.colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8],
                                                 borderRadius: "6px"
                                             })}>
                                                 <Text size={20} p={12}>
