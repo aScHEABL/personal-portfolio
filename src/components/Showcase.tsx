@@ -61,8 +61,8 @@ export default function Showcase() {
                     })}
                 </Container>
             </MediaQuery>
-            <MediaQuery query="(max-width: 1439px) and (min-width: 1024px)" styles={{ display: 'block' }}>
-                    <Container sx={{ display: 'none' }}>
+            <MediaQuery query="(max-width: 2560px) and (min-width: 1024px)" styles={{ display: 'block' }}>
+                    <Container size="110rem" px={100} sx={{ display: 'none' }}>
                         {projects.map((project, index) => {
                             if (index % 2 === 1) {
                                 return (
