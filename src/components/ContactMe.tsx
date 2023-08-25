@@ -45,7 +45,7 @@ export default function ContactMe() {
                 </Container>
             </MediaQuery> */}
             <MediaQuery query="(max-width: 425px)" styles={{ display: 'flex' }}>
-                <Flex h={80} gap={8} justify="center" align="center" wrap="wrap"
+                <Flex h={80} columnGap={8} justify="center" align="center" wrap="wrap"
                 sx={(theme) => ({
                     display: 'none',
                     backgroundColor: theme.colors.gray[8],
@@ -60,6 +60,25 @@ export default function ContactMe() {
                         <AiOutlineMail size="2rem" />
                     </ActionIcon>
                     <Text
+                    >Current build: {nanoid(10)} (Aug 25, 2023)</Text>
+                </Flex>
+            </MediaQuery>
+            <MediaQuery query="(max-width: 993px) and (min-width: 426px)" styles={{ display: 'flex' }}>
+                <Flex h={80} columnGap={8} justify="center" align="center" wrap="wrap"
+                sx={(theme) => ({
+                    display: 'none',
+                    backgroundColor: theme.colors.gray[8],
+                })}>
+                    <ActionIcon size="xl" variant="transparent">
+                        <BiLogoLinkedin size="2rem" />
+                    </ActionIcon>
+                    <ActionIcon size="xl" variant="transparent">
+                        <BsGithub size="2rem" />
+                    </ActionIcon>
+                    <ActionIcon size="xl" variant="transparent">
+                        <AiOutlineMail size="2rem" />
+                    </ActionIcon>
+                    <Text size={20} align="center" sx={{ flex: "1 1 100%" }}
                     >Current build: {nanoid(10)} (Aug 25, 2023)</Text>
                 </Flex>
             </MediaQuery>
