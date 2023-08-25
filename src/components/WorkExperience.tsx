@@ -90,28 +90,30 @@ export default function WorkExperience() {
                     }
                 </Container>
             </MediaQuery>
-            <MediaQuery query="(max-width: 2560px) and (min-width: 768px)" styles={{ display: 'block' }}>
-                <Container size="60rem" pb={40} px={100} 
-                    sx={(theme) => ({ 
+            <MediaQuery query="(min-width: 768px)" styles={{ display: 'block' }}>
+                <Container size="70rem" pb={40} px={100} 
+                    sx={{ 
                         display: 'none',
-                        '&:not(:last-child)': {
-                            border: '1px solid',
-                            borderColor: theme.colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8]
-                        }
-                    })}>
+                    }}>
                     {
                         job_array.map((job) => {
                             return (
                                 <Fragment key={job.id}>
-                                    <Flex py={20} wrap="wrap" justify="space-between">
+                                    <Flex py={20} wrap="wrap" justify="space-between" 
+                                    sx={(theme) => ({
+                                        '&:not(:last-child)': {
+                                            borderBottom: '1px solid',
+                                            borderColor: theme.colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8]
+                                        }
+                                    })}>
                                         <Title order={3} size={25}>
                                             {job.company}
                                         </Title>
                                         <Text size={20}>
                                             {job.durationDate}
                                         </Text>
+                                        <Title order={4} size={20} sx={{ flex: "1 1 100%" }}>{job.title}</Title>
                                     </Flex>
-                                    <Title order={4} size={20}>{job.title}</Title>
                                 </Fragment>
                             )
                         })
