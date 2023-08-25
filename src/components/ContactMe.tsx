@@ -82,6 +82,16 @@ export default function ContactMe() {
                     >Current build: {nanoid(10)} (Aug 25, 2023)</Text>
                 </Flex>
             </MediaQuery>
+            <MediaQuery query="(min-width: 994px)" styles={{ display: 'flex' }}>
+                <Flex h={60} columnGap={8} justify="center" align="center" wrap="wrap"
+                    sx={(theme) => ({
+                        display: 'none',
+                        backgroundColor: theme.colors.gray[8],
+                    })}>
+                        <Text size={20} align="center" sx={{ flex: "1 1 100%" }}
+                        >Current build: {nanoid(10)} (Aug 25, 2023)</Text>
+                </Flex>
+            </MediaQuery>
         </>
     )
 }
