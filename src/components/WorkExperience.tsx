@@ -3,6 +3,7 @@ import {
     Title,
     Text,
     Flex,
+    Container,
     MediaQuery
  } from "@mantine/core";
 import { v4 as uuid } from "uuid";
@@ -40,9 +41,9 @@ export default function WorkExperience() {
                                     </Title>
                                 </Flex>
                             </MediaQuery>
-                            <MediaQuery query="(max-width: 2560px) and (min-width: 426px)" styles={{ display: 'block' }}>
-                                <Flex justify="center" px={40} key={uuid()} wrap="wrap" sx={{ display: 'none' }}>
-                                    <Flex justify="space-between" align="center">
+                            <MediaQuery query="(max-width: 767px) and (min-width: 426px)" styles={{ display: 'block' }}>
+                                <Container size="30rem" p={40} sx={{ display: 'none' }}>
+                                    <Flex wrap="wrap" justify="space-between">
                                         <Title order={3}>
                                             {job.company}
                                         </Title>
@@ -51,7 +52,7 @@ export default function WorkExperience() {
                                         </Text>
                                     </Flex>
                                     <Title order={4}>{job.title}</Title>
-                                </Flex>
+                                </Container>
                             </MediaQuery>
                         </>
                     )
