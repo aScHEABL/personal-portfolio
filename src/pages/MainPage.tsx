@@ -14,7 +14,7 @@ export default function MainPage() {
                 <Intro />
                 <CustomDivider dividerLabel={"Some things I've built"} />
                 <Showcase />
-                <CustomDivider dividerLabel={"Some of my work experience"} />
+                <CustomDivider dividerLabel={"My work experience"} />
                 <WorkExperience />
             </Box>
     )
