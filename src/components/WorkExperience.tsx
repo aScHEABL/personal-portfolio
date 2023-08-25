@@ -22,11 +22,11 @@ const jobs = [
         title: "MIS intern, Help desk",
         durationDate: "Sep 2022 - Present"
     },
-    {
-        company: "輝宇運動有限公司",
-        title: "Lifeguard",
-        durationDate: "Jan 2022 - Oct 2022"
-    }
+    // {
+    //     company: "輝宇運動有限公司",
+    //     title: "Lifeguard",
+    //     durationDate: "Jan 2022 - Oct 2022"
+    // }
 ]
 
 export default function WorkExperience() {
