@@ -1,7 +1,5 @@
 import { 
     Flex,
-    Box,
-    Title,
     Text,
     ActionIcon,
     MediaQuery,
