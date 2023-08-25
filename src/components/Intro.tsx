@@ -33,7 +33,7 @@ export default function Intro() {
     return (
         <>
             {/* for phone devices */}
-            <MediaQuery query="(max-width: 425px) and (min-width: 300px)" styles={{ display: 'block' }}>
+            <MediaQuery query="(max-width: 425px)" styles={{ display: 'block' }}>
                 <Container size="20rem" sx={{ display: 'none' }}>
                     <Title order={1} size={40} 
                     sx={(theme) => ({
