@@ -7,12 +7,20 @@ import { Container,
     Image,
     Box,
 } from "@mantine/core";
+import { useState, useEffect, ReactNode } from "react";
 import { v4 as uuid } from "uuid";
 import tasterTheBakery_img from "../assets/Screenshot_20230630_093002.png";
 import weatherApp_img from "../assets/Screenshot-2022-11-22.png";
 import toDoList_img from "../assets/Screenshot 2023-08-21 at 11.26.39 PM.png"
 
-const projects_array = [
+interface projectProp {
+    name: string;
+    desc: ReactNode;
+    img: { src: string, alt: string }
+    id?: string;
+}
+
+const projects = [
     {
         name: "Taster the bakery",
         desc: <div>This is an improved website from 
@@ -42,7 +50,11 @@ const projects_array = [
 ]
 
 export default function Showcase() {
+    const [projects_array, setProjects_array] = useState<projectProp[]>([]);
 
+    useEffect(() => {
+        setProjects_array(projects.map((project) => ({ ...project, id: uuid() })))
+    }, [])
     return (
         <>
             {/* for both mobile & talbet devices */}
@@ -50,7 +62,7 @@ export default function Showcase() {
                 <Container sx={{ display: 'none' }}>
                     {projects_array.map((project) => {
                         return (
-                            <Flex key={uuid()} wrap="wrap" px={20} py={40} rowGap={20} justify="center">
+                            <Flex key={project.id} wrap="wrap" px={20} py={40} rowGap={20} justify="center">
                                 <Title>{project.name}</Title>
                                 <Text size={20}>
                                     {project.desc}
@@ -69,7 +81,7 @@ export default function Showcase() {
                         {projects_array.map((project, index) => {
                             if (index % 2 === 1) {
                                 return (
-                                    <Flex key={uuid()} px={20} py={40} rowGap={20}>
+                                    <Flex key={project.id} px={20} py={40} rowGap={20}>
                                         <Box sx={{
                                             zIndex: 1,
                                             position: "relative",
@@ -97,7 +109,7 @@ export default function Showcase() {
                                 )
                             } else {
                                 return (
-                                    <Flex key={uuid()} px={20} py={40} rowGap={20}>
+                                    <Flex key={project.id} px={20} py={40} rowGap={20}>
                                         <Image
                                         src={project.img.src}
                                         alt={project.img.alt}
