@@ -13,8 +13,11 @@ export default function ContactMe() {
             backgroundColor: theme.colors.gray[8],
         })}>
             <Title align="center">CONTACT ME 👋</Title>
-            <Flex justify="center">
-                <Text>Current build: experiment@{uuid()} (Aug 25, 2023)</Text>
+            <Flex pos="absolute" bottom="0" left="50%"
+            sx={{ 
+                transform: "translate(-50%, -50%)",
+                }}>
+                <Text>Current build: experiment-0@{uuid()} (Aug 25, 2023)</Text>
             </Flex>
         </Container>
     )
