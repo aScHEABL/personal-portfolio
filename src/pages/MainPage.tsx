@@ -6,6 +6,7 @@ import Sidebar from "../components/Sidebar";
 import CustomDivider from "../components/CustomDivider";
 import Showcase from "../components/Showcase";
 import WorkExperience from "../components/WorkExperience";
+import ContactMe from '../components/ContactMe';
 
 export default function MainPage() {
     return (
@@ -16,6 +17,7 @@ export default function MainPage() {
                 <Showcase />
                 <CustomDivider dividerLabel={"My work experience"} />
                 <WorkExperience />
+                <ContactMe />
             </Box>
     )
 }
