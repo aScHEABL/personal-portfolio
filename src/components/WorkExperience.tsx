@@ -9,11 +9,11 @@ import {
 import { v4 as uuid } from "uuid";
 import { useEffect, useState, Fragment } from "react";
 
-interface jobs_prop {
+interface job_prop {
     company: string;
     title: string;
     durationDate: string;
-    id?: string
+    id?: string;
 }
 
 const jobs = [
@@ -30,7 +30,7 @@ const jobs = [
 ]
 
 export default function WorkExperience() {
-    const [job_array, setJobs_array] = useState<jobs_prop[]>([]);
+    const [job_array, setJobs_array] = useState<job_prop[]>([]);
     useEffect(() => {
         setJobs_array(jobs.map((job) => ({ ...job, id: uuid() })));
     }, [])
