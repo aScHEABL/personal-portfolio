@@ -12,7 +12,6 @@ import {
     Text,
     Image,
     Box,
-    createStyles,
  } from "@mantine/core"
 
 
@@ -52,19 +51,7 @@ const projects = [
     },
 ]
 
-const useStyles = createStyles(() => ({
-    showProjectAnimation: {
-        transform: "none",
-        opacity: 1,
-    },
-    projectInitialStyle: {
-
-    },
-}))
-
 export default function ShowcaseWIP() {
-
-    const { classes } = useStyles();
 
     const [projects_array, setProjects_array] = useState<projectProp[]>([]);
     const refs_array = useRef<Array<HTMLDivElement | null>>([]);
@@ -79,14 +66,16 @@ export default function ShowcaseWIP() {
             entries.forEach((entry) => {
                 // Handle intersection logic here
                 // entry.target refers to the observed project element
+                console.log('IntersectionObserver callback triggered');
                 if (entry.isIntersecting) {
                     // Your logic when the element becomes visible
-                    entry.target.classList.toggle(classes.showProjectAnimation, entry.isIntersecting)
+                    entry.target.style.transform = "none";
+                    entry.target.style.opacity = "1";
                 }
             });
         }, 
         { 
-            threshold: 0.3
+            threshold: 0.1
         }));
     }, [])
 
@@ -96,7 +85,7 @@ export default function ShowcaseWIP() {
             if (ref && observers.current[index]) {
                 observers.current[index].observe(ref);
             }
-        });
+        })
 
         // Cleanup function
         return () => {
@@ -116,7 +105,10 @@ export default function ShowcaseWIP() {
                                 <Box ref={(e) => (refs_array.current[index] = e)} key={item.id}>
                                     <Flex
                                     wrap="wrap" px={20} py={40} rowGap={20} justify="center"
-                                    className={classes.projectInitialStyle}
+                                    style={{ 
+                                        transform: "translateX(-200px)",
+                                        opacity: 0 
+                                    }}
                                     >
                                         <Title>{item.name}</Title>
                                         <Text size={20}>
