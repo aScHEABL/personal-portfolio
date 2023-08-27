@@ -1,6 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { useRef, useState, useEffect, ReactNode } from "react";
-import { useInView } from "framer-motion";
+import { useState, useEffect, ReactNode, useRef } from "react";
 import tasterTheBakery_img from "../assets/Screenshot_20230630_093002.png";
 import weatherApp_img from "../assets/Screenshot-2022-11-22.png";
 import toDoList_img from "../assets/Screenshot 2023-08-21 at 11.26.39 PM.png"
@@ -13,7 +12,9 @@ import {
     Text,
     Image,
     Box,
+    createStyles,
  } from "@mantine/core"
+
 
 interface projectProp {
     name: string;
@@ -51,115 +52,150 @@ const projects = [
     },
 ]
 
-function CallbackFN(project: projectProp, viewportDevice: string, index?: number) {
-    // const ref = useRef(null);
-    // const isInView = useInView(ref, { once: false });
+const useStyles = createStyles((theme) => ({
+    showProjectAnimation: {
+        transform: "none",
+        opacity: 1,
+    },
+    projectInitialStyle: {
 
-    if (viewportDevice === "mobile") {
-        return (
-            <Flex 
-            // ref={ref}
-            key={project.id} wrap="wrap" px={20} py={40} rowGap={20} justify="center"
-            // sx={{
-            //     transform: isInView ? "none" : "translateX(-200px)",
-            //     opacity: isInView ? 1 : 0,
-            //     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-            // }}
-            >
-                <Title>{project.name}</Title>
-                <Text size={20}>
-                    {project.desc}
-                </Text>
-                <Image
-                src={project.img.src}
-                alt={project.img.alt}
-                />
-            </Flex>
-        )
-    } else if (viewportDevice === "desktop") {
-        if (index === undefined) return;
-        else {
-            if (index % 2 === 1) {
-                return (
-                    <Flex key={project.id} px={20} py={40} rowGap={20}>
-                        <Box sx={{
-                            zIndex: 1,
-                            position: "relative",
-                            left: "4em",
-                        }}>
-                            <Title>
-                                {project.name}
-                            </Title>
-                            <Box sx={(theme) => ({
-                                margin: "1em 0 0 0",
-                                padding: "1em 1em 1em 1em",
-                                backgroundColor: theme.colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8],
-                                borderRadius: "6px"
-                            })}>
-                                <Text size={20} p={12}>
-                                    {project.desc}
-                                </Text>
-                            </Box>
-                        </Box>
-                        <Image
-                            src={project.img.src}
-                            alt={project.img.alt}
-                        />
-                    </Flex>
-                )
-            } else if (index % 2 === 0) {
-                return (
-                    <Flex key={project.id} px={20} py={40} rowGap={20}>
-                        <Image
-                        src={project.img.src}
-                        alt={project.img.alt}
-                        />
-                        <Box sx={{
-                            zIndex: 1,
-                            position: "relative",
-                            right: "4em"
-                        }}
-                        >
-                            <Title align="right">
-                                {project.name}
-                            </Title>
-                            <Box sx={(theme) => ({
-                                margin: "1em 0 0 0",
-                                padding: "1em 1em 1em 1em",
-                                backgroundColor: theme.colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8],
-                                borderRadius: "6px"
-                            })}>
-                                <Text size={20} p={12}>
-                                    {project.desc}
-                                </Text>
-                            </Box>
-                        </Box>
-                    </Flex>
-                )
-            }
-        }
-    }
-}
+    },
+}))
 
 export default function ShowcaseWIP() {
+
+    const { classes } = useStyles();
+
     const [projects_array, setProjects_array] = useState<projectProp[]>([]);
+    const refs_array = useRef<Array<HTMLDivElement | null>>([]);
+    const observers = useRef<IntersectionObserver[]>([]);
+
 
     useEffect(() => {
-        setProjects_array(projects.map((project) => ({ ...project, id: uuid() })))
+        setProjects_array(projects.map((project) => ({ ...project, id: uuid() })));
+
+        // Create IntersectionObserver instances for each project element
+        observers.current = refs_array.current.map(() => new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                // Handle intersection logic here
+                // entry.target refers to the observed project element
+                if (entry.isIntersecting) {
+                    // Your logic when the element becomes visible
+                    entry.target.classList.toggle(classes.showProjectAnimation, entry.isIntersecting)
+                }
+            });
+        }, 
+        { 
+            threshold: 0.3
+        }));
     }, [])
+
+    useEffect(() => {
+        // Start observing each project element
+        refs_array.current.forEach((ref, index) => {
+            if (ref && observers.current[index]) {
+                observers.current[index].observe(ref);
+            }
+        });
+
+        // Cleanup function
+        return () => {
+            observers.current.forEach((observer) => {
+                observer.disconnect();
+            });
+        };
+    }, [refs_array.current])
+
     return (
         <>
             {/* for both mobile & talbet devices */}
             <MediaQuery query="(max-width: 1023px)" styles={{ display: 'block' }}>
                 <Container sx={{ display: 'none' }}>
-                    {projects_array.map((project) => CallbackFN(project, "mobile"))}
+                    {
+                        projects_array.map((item, index) => (
+                                <Box ref={(e) => (refs_array.current[index] = e)} key={item.id}>
+                                    <Flex
+                                    wrap="wrap" px={20} py={40} rowGap={20} justify="center"
+                                    className={classes.projectInitialStyle}
+                                    >
+                                        <Title>{item.name}</Title>
+                                        <Text size={20}>
+                                            {item.desc}
+                                        </Text>
+                                        <Image
+                                        src={item.img.src}
+                                        alt={item.img.alt}
+                                        />
+                                    </Flex>
+                                </Box>
+                        ))
+                    }
                 </Container>
             </MediaQuery>
-            <MediaQuery query="(max-width: 2560px) and (min-width: 1024px)" styles={{ display: 'block' }}>
+            {/* <MediaQuery query="(max-width: 2560px) and (min-width: 1024px)" styles={{ display: 'block' }}>
                     <Container size="110rem" px={100} sx={{ display: 'none' }}>
-                        {projects_array.map((project, index) => CallbackFN(project, "desktop", index))}
+                        {projects_array.map((project, index) => {
+                            if (index % 2 === 1) {
+                                return (
+                                    <Flex key={project.id} px={20} py={40} rowGap={20}>
+                                        <Box sx={{
+                                            zIndex: 1,
+                                            position: "relative",
+                                            left: "4em",
+                                        }}>
+                                            <Title>
+                                                {project.name}
+                                            </Title>
+                                            <Box sx={(theme) => ({
+                                                margin: "1em 0 0 0",
+                                                padding: "1em 1em 1em 1em",
+                                                backgroundColor: theme.colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8],
+                                                borderRadius: "6px"
+                                            })}>
+                                                <Text size={20} p={12}>
+                                                    {project.desc}
+                                                </Text>
+                                            </Box>
+                                        </Box>
+                                        <Image
+                                            src={project.img.src}
+                                            alt={project.img.alt}
+                                        />
+                                    </Flex>
+                                )
+                            } else if (index % 2 === 0) {
+                                return (
+                                    <Flex key={project.id} px={20} py={40} rowGap={20}>
+                                        <Image
+                                        src={project.img.src}
+                                        alt={project.img.alt}
+                                        />
+                                        <Box sx={{
+                                            zIndex: 1,
+                                            position: "relative",
+                                            right: "4em"
+                                        }}
+                                        >
+                                            <Title align="right">
+                                                {project.name}
+                                            </Title>
+                                            <Box sx={(theme) => ({
+                                                margin: "1em 0 0 0",
+                                                padding: "1em 1em 1em 1em",
+                                                backgroundColor: theme.colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8],
+                                                borderRadius: "6px"
+                                            })}>
+                                                <Text size={20} p={12}>
+                                                    {project.desc}
+                                                </Text>
+                                            </Box>
+                                        </Box>
+                                    </Flex>
+                                )
+                            }
+                        })}
                     </Container>
-            </MediaQuery>
+            </MediaQuery> */}
         </>
     )
 }

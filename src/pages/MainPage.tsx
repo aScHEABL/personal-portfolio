@@ -15,7 +15,7 @@ export default function MainPage() {
                 <Sidebar />
                 <Intro />
                 <CustomDivider dividerLabel={"Some things I've built"} />
-                {/* <Showcase /> */}
+                <Showcase />
                 {/* <ShowcaseWIP /> */}
                 <CustomDivider dividerLabel={"My work experience"} />
                 <WorkExperience />
