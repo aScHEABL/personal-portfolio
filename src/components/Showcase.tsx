@@ -6,12 +6,14 @@ import { Container,
     Anchor, 
     Image,
     Box,
+    Paper,
 } from "@mantine/core";
 import { useState, useEffect, ReactNode } from "react";
 import { v4 as uuid } from "uuid";
-import tasterTheBakery_img from "../assets/Screenshot_20230630_093002.png";
-import weatherApp_img from "../assets/Screenshot-2022-11-22.png";
-import toDoList_img from "../assets/Screenshot 2023-08-21 at 11.26.39 PM.png"
+import tasterTheBakery_img from "../assets/Screenshot 2023-08-28 at 1.00.40 AM.png";
+import weatherApp_img from "../assets/Screenshot 2023-08-28 at 12.01.26 AM.png";
+import toDoList_img from "../assets/Screenshot 2023-08-27 at 11.53.24 PM.png";
+import cvProject_img from "../assets/Screenshot 2023-08-27 at 11.51.49 PM.png";
 
 interface projectProp {
     name: string;
@@ -56,7 +58,7 @@ const projects = [
         desc: <div>Allow the users to generate and download their CV on the website in real-time.</div>,
         tech: "React - Tailwind - JsPDF",
         img: {
-            src: "",
+            src: cvProject_img,
             alt: "a screenshot of CV Project"
         }
     }
@@ -108,7 +110,8 @@ export default function Showcase() {
                                                 margin: "1em 0 0 0",
                                                 padding: "1em 1em 1em 1em",
                                                 backgroundColor: theme.colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8],
-                                                borderRadius: "6px"
+                                                borderRadius: "6px",
+                                                boxShadow: "5px 5px 5px" + theme.colors.dark[4]
                                             })}>
                                                 <Text size={20} p={12}>
                                                     {project.desc}
@@ -141,7 +144,8 @@ export default function Showcase() {
                                                 margin: "1em 0 0 0",
                                                 padding: "1em 1em 1em 1em",
                                                 backgroundColor: theme.colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8],
-                                                borderRadius: "6px"
+                                                borderRadius: "6px",
+                                                boxShadow: "5px 5px 5px" + theme.colors.dark[4]
                                             })}>
                                                 <Text size={20} p={12}>
                                                     {project.desc}
