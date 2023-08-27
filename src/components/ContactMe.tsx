@@ -67,17 +67,17 @@ export default function ContactMe() {
                     display: 'none',
                     backgroundColor: theme.colors.gray[8],
                 })}>
-                    <ActionIcon size="xl" variant="transparent">
+                    <ActionIcon size="xl" variant="transparent" sx={{ color: "white" }}>
                         <BiLogoLinkedin size="2rem" />
                     </ActionIcon>
-                    <ActionIcon size="xl" variant="transparent">
+                    <ActionIcon size="xl" variant="transparent" sx={{ color: "white" }}>
                         <BsGithub size="2rem" />
                     </ActionIcon>
-                    <ActionIcon size="xl" variant="transparent">
+                    <ActionIcon size="xl" variant="transparent" sx={{ color: "white" }}>
                         <AiOutlineMail size="2rem" />
                     </ActionIcon>
-                    <Text size={20} align="center" sx={{ flex: "1 1 100%" }}
-                    >Current build: 6hltral9E_ (Aug 25, 2023)</Text>
+                    <Text size={20} align="center" color="white" sx={{ flex: "1 1 100%" }}
+                    >Current build: Ua9YCgc5OJ (Aug 28, 2023)</Text>
                 </Flex>
             </MediaQuery>
             <MediaQuery query="(min-width: 994px)" styles={{ display: 'flex' }}>
@@ -86,8 +86,11 @@ export default function ContactMe() {
                         display: 'none',
                         backgroundColor: theme.colors.gray[8],
                     })}>
-                        <Text size={20} align="center" sx={{ flex: "1 1 100%" }}
-                        >Current build: 6hltral9E_ (Aug 25, 2023)</Text>
+                        <Text size={20} align="center" color="white"
+                        sx={{ 
+                            flex: "1 1 100%",
+                         }}
+                        >Current build: Ua9YCgc5OJ (Aug 28, 2023)</Text>
                 </Flex>
             </MediaQuery>
         </>
