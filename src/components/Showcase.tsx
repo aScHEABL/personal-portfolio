@@ -16,6 +16,7 @@ import toDoList_img from "../assets/Screenshot 2023-08-21 at 11.26.39 PM.png"
 interface projectProp {
     name: string;
     desc: ReactNode;
+    tech: string;
     img: { src: string, alt: string }
     id?: string;
 }
@@ -25,7 +26,8 @@ const projects = [
         name: "Taster the bakery",
         desc: <div>This is an improved website from 
         <Anchor href="https://tasters.imweb.me/">&nbsp;吃吃看Tasters</Anchor> 
-        &nbsp;at the request of the business owner</div>,
+        &nbsp;at the request of the business owner.</div>,
+        tech: "Chakra-UI - React",
         img: {
             src: tasterTheBakery_img,
             alt: "a screenshot of a bakery website",
@@ -33,7 +35,8 @@ const projects = [
     },
     {
         name: "Weather App",
-        desc: <div>A polish and sleek web app that displays current weather for any given city/region</div>,
+        desc: <div>A polish and sleek web app that displays current weather for any given city/region.</div>,
+        tech: "HTML - CSS - Javascript",
         img: {
             src: weatherApp_img,
             alt: "a screenshot of weather web app",
@@ -41,12 +44,22 @@ const projects = [
     },
     {
         name: "To do list app",
-        desc: <div>A to do list web app that let you add and edit task, dragging tasks and move them between the columns.</div>,
+        desc: <div>A to do list web app allows you add and edit task, dragging tasks and move them between the columns.</div>,
+        tech: "hello-pangea/dnd - React - Typescript",
         img: {
             src: toDoList_img,
             alt: "a screenshot of to do list app"
         }
     },
+    {
+        name: "CV Project",
+        desc: <div>Allow the users to generate and download their CV on the website in real-time.</div>,
+        tech: "React - Tailwind - JsPDF",
+        img: {
+            src: "",
+            alt: "a screenshot of CV Project"
+        }
+    }
 ]
 
 export default function Showcase() {
@@ -67,6 +80,7 @@ export default function Showcase() {
                                 <Text size={20}>
                                     {project.desc}
                                 </Text>
+                                <Text component="label">{project.tech}</Text>
                                 <Image
                                 src={project.img.src}
                                 alt={project.img.alt}
