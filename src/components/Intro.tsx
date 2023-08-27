@@ -8,6 +8,7 @@ import {
     MediaQuery,
     Button,
     Image,
+    Tooltip
    } from '@mantine/core';
 
 import { useMantineTheme } from '@mantine/core';
@@ -60,9 +61,11 @@ export default function Intro() {
                     <Text size={20} pb={20}>
                         {introText.secondPara()}
                     </Text>
-                    <Button radius="md" size="lg">
-                        {introText.btnLabel}
-                    </Button>
+                    <Tooltip label="This button is for decorative purpose">
+                        <Button radius="md" size="lg">
+                            {introText.btnLabel}
+                        </Button>
+                    </Tooltip>
                 </Container>
                 {/* for tablet devices */}
             </MediaQuery>
@@ -91,9 +94,11 @@ export default function Intro() {
                         <Text size={18} styles={{ flex: "1 1 100%" }}>
                             {introText.secondPara()}
                         </Text>
-                        <Button radius="md" size="lg">
-                            {introText.btnLabel}
-                        </Button>
+                        <Tooltip label="This button is for decorative purpose">
+                            <Button radius="md" size="lg">
+                                {introText.btnLabel}
+                            </Button>
+                        </Tooltip>
                     </Flex>
                 </Container>
                 {/* for laptop devices */}
@@ -123,9 +128,11 @@ export default function Intro() {
                         <Text size={18} styles={{ flex: "1 1 100%" }}>
                             {introText.secondPara()}
                         </Text>
-                        <Button radius="md" size="xl">
-                                {introText.btnLabel}
-                        </Button>
+                        <Tooltip label="This button is for decorative purpose">
+                            <Button radius="md" size="xl">
+                                    {introText.btnLabel}
+                            </Button>
+                        </Tooltip>
                     </Flex>
                 </Container>
             </MediaQuery>
@@ -155,9 +162,11 @@ export default function Intro() {
                             <Text size={24} mr={500} my={20}>
                                 {introText.secondPara()}
                             </Text>
-                            <Button radius="md" size="xl">
-                                {introText.btnLabel}
-                            </Button>
+                            <Tooltip label="This button is for decorative purpose">
+                                <Button radius="md" size="xl">
+                                    {introText.btnLabel}
+                                </Button>
+                            </Tooltip>
                         </Box>
                 </Container>
             </MediaQuery>
