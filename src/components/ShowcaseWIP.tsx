@@ -69,8 +69,8 @@ export default function ShowcaseWIP() {
                 console.log('IntersectionObserver callback triggered');
                 if (entry.isIntersecting) {
                     // Your logic when the element becomes visible
-                    entry.target.style.transform = "none";
-                    entry.target.style.opacity = "1";
+                    // entry.target.style.transform = "none";
+                    // entry.target.style.opacity = "1";
                 }
             });
         }, 
