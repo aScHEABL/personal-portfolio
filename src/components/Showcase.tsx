@@ -6,14 +6,13 @@ import { Container,
     Anchor, 
     Image,
     Box,
-    Paper,
 } from "@mantine/core";
 import { useState, useEffect, ReactNode } from "react";
 import { v4 as uuid } from "uuid";
 import tasterTheBakery_img from "../assets/Screenshot 2023-08-28 at 1.00.40 AM.png";
 import weatherApp_img from "../assets/Screenshot 2023-08-28 at 12.01.26 AM.png";
 import toDoList_img from "../assets/Screenshot 2023-08-27 at 11.53.24 PM.png";
-import cvProject_img from "../assets/Screenshot 2023-08-27 at 11.51.49 PM.png";
+import cvProject_img from "../assets/Screenshot 2023-08-28 at 2.43.27 AM.png";
 
 interface projectProp {
     name: string;
@@ -29,7 +28,7 @@ const projects = [
         desc: <div>This is an improved website from 
         <Anchor href="https://tasters.imweb.me/">&nbsp;吃吃看Tasters</Anchor> 
         &nbsp;at the request of the business owner.</div>,
-        tech: "Chakra-UI - React",
+        tech: "ChakraUI - React",
         img: {
             src: tasterTheBakery_img,
             alt: "a screenshot of a bakery website",
@@ -47,7 +46,7 @@ const projects = [
     {
         name: "To do list app",
         desc: <div>A to do list web app allows you add and edit task, dragging tasks and move them between the columns.</div>,
-        tech: "hello-pangea/dnd - React - Typescript",
+        tech: "@hello-pangea/dnd - React - Typescript",
         img: {
             src: toDoList_img,
             alt: "a screenshot of to do list app"
@@ -82,7 +81,11 @@ export default function Showcase() {
                                 <Text size={20}>
                                     {project.desc}
                                 </Text>
-                                <Text component="label">{project.tech}</Text>
+                                <Text component="label" size="xl" sx={(theme) => ({
+                                    color: theme.colorScheme === "light" ? theme.colors.blue[8] : theme.colors.blue[4]
+                                })}>
+                                    {project.tech}
+                                </Text>
                                 <Image
                                 src={project.img.src}
                                 alt={project.img.alt}
@@ -107,16 +110,21 @@ export default function Showcase() {
                                                 {project.name}
                                             </Title>
                                             <Box sx={(theme) => ({
-                                                margin: "1em 0 0 0",
+                                                margin: "1em 0 1em 0",
                                                 padding: "1em 1em 1em 1em",
                                                 backgroundColor: theme.colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8],
                                                 borderRadius: "6px",
-                                                boxShadow: "5px 5px 5px" + theme.colors.dark[4]
+                                                boxShadow: theme.colorScheme === "light" ? "5px 5px 5px" + theme.colors.dark[4] : "none"
                                             })}>
                                                 <Text size={20} p={12}>
                                                     {project.desc}
                                                 </Text>
                                             </Box>
+                                            <Text component="label" size="xl" sx={(theme) => ({
+                                                color: theme.colorScheme === "light" ? theme.colors.blue[8] : theme.colors.blue[4]
+                                            })}>
+                                                {project.tech}
+                                            </Text>
                                         </Box>
                                         <Image
                                             src={project.img.src}
@@ -141,16 +149,21 @@ export default function Showcase() {
                                                 {project.name}
                                             </Title>
                                             <Box sx={(theme) => ({
-                                                margin: "1em 0 0 0",
+                                                margin: "1em 0 1em 0",
                                                 padding: "1em 1em 1em 1em",
                                                 backgroundColor: theme.colorScheme === "light" ? theme.colors.gray[4] : theme.colors.gray[8],
                                                 borderRadius: "6px",
-                                                boxShadow: "5px 5px 5px" + theme.colors.dark[4]
+                                                boxShadow: theme.colorScheme === "light" ? "5px 5px 5px" + theme.colors.dark[4] : "none"
                                             })}>
                                                 <Text size={20} p={12}>
                                                     {project.desc}
                                                 </Text>
                                             </Box>
+                                            <Text ta="right" size="xl" sx={(theme) => ({
+                                                color: theme.colorScheme === "light" ? theme.colors.blue[8] : theme.colors.blue[4],
+                                            })}>
+                                                {project.tech}
+                                            </Text>
                                         </Box>
                                     </Flex>
                                 )
