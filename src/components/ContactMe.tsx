@@ -4,7 +4,7 @@ import {
     ActionIcon,
     MediaQuery,
  } from "@mantine/core";
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
@@ -58,7 +58,7 @@ export default function ContactMe() {
                         <AiOutlineMail size="2rem" />
                     </ActionIcon>
                     <Text
-                    >Current build: {nanoid(10)} (Aug 25, 2023)</Text>
+                    >Current build: 6hltral9E_ (Aug 25, 2023)</Text>
                 </Flex>
             </MediaQuery>
             <MediaQuery query="(max-width: 993px) and (min-width: 426px)" styles={{ display: 'flex' }}>
@@ -77,7 +77,7 @@ export default function ContactMe() {
                         <AiOutlineMail size="2rem" />
                     </ActionIcon>
                     <Text size={20} align="center" sx={{ flex: "1 1 100%" }}
-                    >Current build: {nanoid(10)} (Aug 25, 2023)</Text>
+                    >Current build: 6hltral9E_ (Aug 25, 2023)</Text>
                 </Flex>
             </MediaQuery>
             <MediaQuery query="(min-width: 994px)" styles={{ display: 'flex' }}>
@@ -87,7 +87,7 @@ export default function ContactMe() {
                         backgroundColor: theme.colors.gray[8],
                     })}>
                         <Text size={20} align="center" sx={{ flex: "1 1 100%" }}
-                        >Current build: {nanoid(10)} (Aug 25, 2023)</Text>
+                        >Current build: 6hltral9E_ (Aug 25, 2023)</Text>
                 </Flex>
             </MediaQuery>
         </>
