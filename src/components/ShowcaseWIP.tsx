@@ -52,7 +52,7 @@ const projects = [
     },
 ]
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
     showProjectAnimation: {
         transform: "none",
         opacity: 1,

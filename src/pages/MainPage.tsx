@@ -7,7 +7,7 @@ import CustomDivider from "../components/CustomDivider";
 import Showcase from "../components/Showcase";
 import WorkExperience from "../components/WorkExperience";
 import ContactMe from '../components/ContactMe';
-import ShowcaseWIP from '../components/ShowcaseWIP';
+// import ShowcaseWIP from '../components/ShowcaseWIP';
 
 export default function MainPage() {
     return (
