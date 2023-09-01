@@ -14,7 +14,7 @@ import {
 import { useMantineTheme } from '@mantine/core';
 
 const introText = {
-    schoolLink: <Anchor href="https://www.ntub.edu.tw/" target="_blank">NTUB</Anchor>,
+    schoolLink: <Anchor href="https://www.nou.edu.tw/" target="_blank">NOU</Anchor>,
     companyLink: <Anchor href="https://www.feg.com.tw/en/home/index.aspx" target="_blank">Far Eastern Group</Anchor>,
     skills: ["Typescript", "React", "HTML/CSS", "Python", "Node.js", "MongoDB"],
     title: "HI, I'M ERIC.",
@@ -49,11 +49,11 @@ export default function Intro() {
                     {
                         theme.colorScheme === "light" ? 
                         <Box maw="20rem">
-                            <Image src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=40&pause=1000&color=000000&width=435&height=100&lines=HI%2C+I'M+ERIC!" alt="Hi, I'm Eric" />
+                            <Image src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=50&duration=3000&pause=1000&color=000000&width=435&height=80&lines=HI%2C+I'M+ERIC!" alt="HI, I'M ERIC!" />
                         </Box>
                         :
                         <Box maw="200rem">
-                            <Image src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=40&pause=1000&color=FFFFFF&width=435&height=100&lines=HI%2C+I'M+ERIC!" alt="Hi, I'm Eric" />
+                            <Image src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=50&duration=3000&pause=1000&color=FFFFFF&width=435&height=80&lines=HI%2C+I'M+ERIC!" alt="HI, I'M ERIC!" />
                         </Box>
                     }
                     <Title order={2} size="1.3rem" mb={25}>
@@ -81,11 +81,11 @@ export default function Intro() {
                     {
                         theme.colorScheme === "light" ? 
                         <Box maw="20rem">
-                            <Image src="https://readme-typing-svg.demolab.com?font=Roboto&weight=700&size=60&duration=1500&pause=1000&color=000000&vCenter=true&repeat=false&width=500&height=60&lines=HI%2C+I'M+ERIC!" alt="Hi, I'm Eric" />
+                            <Image src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=60&duration=3000&pause=1000&color=000000&vCenter=true&repeat=false&width=500&height=60&lines=HI%2C+I'M+ERIC!" alt="HI, I'M ERIC!" />
                         </Box>
                         :
                         <Box maw="20rem">
-                            <Image src="https://readme-typing-svg.demolab.com?font=Roboto&weight=700&size=60&duration=1500&pause=1000&color=FFFFFF&vCenter=true&repeat=false&width=500&height=60&lines=HI%2C+I'M+ERIC!" alt="Hi, I'm Eric" />
+                            <Image src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=60&duration=3000&pause=1000&color=FFFFFF&vCenter=true&repeat=false&width=500&height=60&lines=HI%2C+I'M+ERIC!" alt="HI, I'M ERIC!" />
                         </Box>
                     }
                     <Title order={2} size={20} mb={48}>
@@ -115,11 +115,11 @@ export default function Intro() {
                     {
                         theme.colorScheme === "light" ? 
                         <Box maw="20rem">
-                            <Image src="https://readme-typing-svg.demolab.com?font=Roboto&weight=800&size=60&duration=1500&pause=1000&color=000000&vCenter=true&repeat=false&width=500&height=60&lines=HI%2C+I'M+ERIC!" alt="Hi, I'm Eric" />
+                            <Image src="https://readme-typing-svg.demolab.com?font=Roboto&weight=800&size=60&duration=1500&pause=1000&color=000000&vCenter=true&repeat=false&width=500&height=60&lines=HI%2C+I'M+ERIC!" alt="HI, I'M ERIC!" />
                         </Box>
                         :
                         <Box maw="20rem">
-                            <Image src="https://readme-typing-svg.demolab.com?font=Roboto&weight=800&size=60&duration=1500&pause=1000&color=FFFFFF&vCenter=true&repeat=false&width=500&height=60&lines=HI%2C+I'M+ERIC!" alt="Hi, I'm Eric" />
+                            <Image src="https://readme-typing-svg.demolab.com?font=Roboto&weight=800&size=60&duration=1500&pause=1000&color=FFFFFF&vCenter=true&repeat=false&width=500&height=60&lines=HI%2C+I'M+ERIC!" alt="HI, I'M ERIC!" />
                         </Box>
                     }
                     <Title order={2} size={20} mb={48}>
@@ -149,11 +149,11 @@ export default function Intro() {
                     {
                         theme.colorScheme === "light" ? 
                         <Box maw="40rem">
-                            <Image src="https://readme-typing-svg.demolab.com?font=Roboto&weight=600&size=40&duration=1500&pause=1000&color=000000&vCenter=true&repeat=false&width=450&height=40&lines=HI%2C+I'M+ERIC!" alt="Hi, I'm Eric" />
+                            <Image src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=40&duration=1500&pause=1000&color=000000&vCenter=true&repeat=false&width=450&height=40&lines=HI%2C+I'M+ERIC!" alt="HI, I'M ERIC!" />
                         </Box>
                         :
                         <Box maw="40rem">
-                            <Image src="https://readme-typing-svg.demolab.com?font=Roboto&weight=600&size=40&duration=1500&pause=1000&color=FFFFFF&vCenter=true&repeat=false&width=450&height=40&lines=HI%2C+I'M+ERIC!" alt="Hi, I'm Eric" />
+                            <Image src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=40&duration=1500&pause=1000&color=FFFFFF&vCenter=true&repeat=false&width=450&height=40&lines=HI%2C+I'M+ERIC!" alt="HI, I'M ERIC!" />
                         </Box>
                     }
                     <Title order={2} size={20} mb={48}>
