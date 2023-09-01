@@ -48,9 +48,13 @@ export default function Intro() {
                     </Title> */}
                     {
                         theme.colorScheme === "light" ? 
-                        <Image src="https://readme-typing-svg.demolab.com?font=Roboto&weight=900&size=60&duration=1500&pause=1000&color=000000&vCenter=true&repeat=false&width=500&height=60&lines=HI%2C+I'M+ERIC!" alt="Hi, I'm Eric" />
+                        <Box maw="20rem">
+                            <Image src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=40&pause=1000&color=000000&width=435&height=100&lines=HI%2C+I'M+ERIC!" alt="Hi, I'm Eric" />
+                        </Box>
                         :
-                        <Image src="https://readme-typing-svg.demolab.com?font=Roboto&weight=900&size=60&duration=1500&pause=1000&color=FFFFFF&vCenter=true&repeat=false&width=500&height=60&lines=HI%2C+I'M+ERIC!" alt="Hi, I'm Eric" />
+                        <Box maw="200rem">
+                            <Image src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=40&pause=1000&color=FFFFFF&width=435&height=100&lines=HI%2C+I'M+ERIC!" alt="Hi, I'm Eric" />
+                        </Box>
                     }
                     <Title order={2} size="1.3rem" mb={25}>
                         {introText.subTitle}
