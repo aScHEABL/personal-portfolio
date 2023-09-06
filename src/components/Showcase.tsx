@@ -6,6 +6,8 @@ import { Container,
     Anchor, 
     Image,
     Box,
+    ActionIcon,
+    Group,
 } from "@mantine/core";
 import { useState, useEffect, ReactNode } from "react";
 import { v4 as uuid } from "uuid";
@@ -13,12 +15,16 @@ import tasterTheBakery_img from "../assets/Screenshot 2023-08-28 at 1.00.40 AM.p
 import weatherApp_img from "../assets/Screenshot 2023-08-28 at 12.01.26 AM.png";
 import toDoList_img from "../assets/Screenshot 2023-08-27 at 11.53.24 PM.png";
 import cvProject_img from "../assets/Screenshot 2023-08-28 at 2.43.27 AM.png";
+import { BsGithub } from "react-icons/bs";
+import { FiLink } from "react-icons/fi";
 
 interface projectProp {
     name: string;
     desc: ReactNode;
     tech: string;
-    img: { src: string, alt: string }
+    img: { src: string, alt: string };
+    liveDemoLink: string;
+    repoLink: string;
     id?: string;
 }
 
@@ -32,7 +38,9 @@ const projects = [
         img: {
             src: tasterTheBakery_img,
             alt: "a screenshot of a bakery website",
-        }
+        },
+        liveDemoLink: "https://ascheabl.github.io/tasters-the-bakery-landing-page/",
+        repoLink: "https://github.com/aScHEABL/tasters-the-bakery-landing-page",
     },
     {
         name: "Weather App",
@@ -41,7 +49,9 @@ const projects = [
         img: {
             src: weatherApp_img,
             alt: "a screenshot of weather web app",
-        }
+        },
+        liveDemoLink: "https://ascheabl.github.io/Weather-app/",
+        repoLink: "https://github.com/aScHEABL/Weather-app",
     },
     {
         name: "To do list app",
@@ -50,7 +60,9 @@ const projects = [
         img: {
             src: toDoList_img,
             alt: "a screenshot of to do list app"
-        }
+        },
+        liveDemoLink: "https://ascheabl.github.io/to-do-list-react/",
+        repoLink: "https://github.com/aScHEABL/to-do-list-react",
     },
     {
         name: "CV Project",
@@ -59,7 +71,9 @@ const projects = [
         img: {
             src: cvProject_img,
             alt: "a screenshot of CV Project"
-        }
+        },
+        liveDemoLink: "https://ascheabl.github.io/cv-project/",
+        repoLink: "https://github.com/aScHEABL/cv-project",
     }
 ]
 
@@ -86,6 +100,14 @@ export default function Showcase() {
                                 })}>
                                     {project.tech}
                                 </Text>
+                                <Group align="center" position="center" sx={{ flex: '1 1 100%' }}>
+                                    <ActionIcon component="a" href={project.liveDemoLink} target="_blank" size={40}>
+                                        <FiLink size={40} />
+                                    </ActionIcon>
+                                    <ActionIcon component="a" href={project.repoLink} target="_blank" size={40}>
+                                        <BsGithub size={40} />
+                                    </ActionIcon>
+                                </Group>
                                 <Image
                                 src={project.img.src}
                                 alt={project.img.alt}
@@ -125,6 +147,14 @@ export default function Showcase() {
                                             })}>
                                                 {project.tech}
                                             </Text>
+                                            <Group my="0.25em" align="center" sx={{ flex: '1 1 100%' }}>
+                                                <ActionIcon component="a" href={project.liveDemoLink} target="_blank" size={40}>
+                                                    <FiLink size={40} />
+                                                </ActionIcon>
+                                                <ActionIcon component="a" href={project.repoLink} target="_blank" size={40}>
+                                                    <BsGithub size={40} />
+                                                </ActionIcon>
+                                            </Group>
                                         </Box>
                                         <Image
                                             src={project.img.src}
@@ -159,11 +189,19 @@ export default function Showcase() {
                                                     {project.desc}
                                                 </Text>
                                             </Box>
-                                            <Text ta="right" size="xl" sx={(theme) => ({
+                                            <Text my="0.25em" ta="right" size="xl" sx={(theme) => ({
                                                 color: theme.colorScheme === "light" ? theme.colors.blue[8] : theme.colors.blue[4],
                                             })}>
                                                 {project.tech}
                                             </Text>
+                                            <Group align="center" position="right" sx={{ flex: '1 1 100%' }}>
+                                                <ActionIcon component="a" href={project.liveDemoLink} target="_blank" size={40}>
+                                                    <FiLink size={40} />
+                                                </ActionIcon>
+                                                <ActionIcon component="a" href={project.repoLink} target="_blank" size={40}>
+                                                    <BsGithub size={40} />
+                                                </ActionIcon>
+                                            </Group>
                                         </Box>
                                     </Flex>
                                 )

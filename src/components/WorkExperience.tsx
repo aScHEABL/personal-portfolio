@@ -19,7 +19,7 @@ interface job_prop {
 const jobs = [
     {
         company: "Far Eastern Group",
-        title: "MIS intern, Help desk",
+        title: "MIS intern",
         durationDate: "Sep 2022 - Present"
     },
     // {
