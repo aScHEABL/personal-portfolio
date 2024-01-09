@@ -27,10 +27,10 @@ export default function Sidebar() {
                             <BiLogoLinkedin size="2rem" />
                         </ActionIcon>
                     </Tooltip>
-                    <ActionIcon component="a" href="https://github.com/aScHEABL" size="xl" variant="transparent">
+                    <ActionIcon component="a" href="https://github.com/aScHEABL" target="_blank" size="xl" variant="transparent">
                         <BsGithub size="2rem" />
                     </ActionIcon>
-                    <ActionIcon component="a" href="mailto:natothun@gmail.com?subject=Job inquiry from personal portfolio" size="xl" variant="transparent">
+                    <ActionIcon component="a" href="mailto:natothun@gmail.com?subject=Job inquiry from personal portfolio" target="_blank" size="xl" variant="transparent">
                         <AiOutlineMail size="2rem" />
                     </ActionIcon>
                 </Flex>
