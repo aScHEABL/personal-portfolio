@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import 'react-pdf/dist/Page/AnnotationLayer.css';
@@ -14,14 +13,9 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 export default function PDF({ pdfFile }: PDFProps) {
-  useEffect(() => {
-    console.log(pdfFile);
-  })
   return (
-    <div>
-      <Document file={pdfFile}>
-        <Page pageNumber={1} renderTextLayer={false} />
-      </Document>
-    </div>
+    <Document file={pdfFile}>
+      <Page pageNumber={1} />
+    </Document>
   );
 }
