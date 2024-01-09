@@ -8,8 +8,8 @@ import {
     MediaQuery,
     Button,
     Image,
-    Tooltip
    } from '@mantine/core';
+import { Link } from 'react-router-dom';
 
 import { useMantineTheme } from '@mantine/core';
 
@@ -65,7 +65,7 @@ export default function Intro() {
                     <Text size={20} pb={20}>
                         {introText.secondPara()}
                     </Text>
-                    <Button radius="md" size="lg">
+                    <Button component={Link} to="/resume" target="_blank" radius="md" size="lg">
                         {introText.btnLabel}
                     </Button>
                 </Container>
@@ -96,7 +96,7 @@ export default function Intro() {
                         <Text size={18} styles={{ flex: "1 1 100%" }}>
                             {introText.secondPara()}
                         </Text>
-                        <Button radius="md" size="lg">
+                        <Button component={Link} to="/resume" target="_blank" radius="md" size="lg">
                             {introText.btnLabel}
                         </Button>
                     </Flex>
@@ -128,7 +128,7 @@ export default function Intro() {
                         <Text size={18} styles={{ flex: "1 1 100%" }}>
                             {introText.secondPara()}
                         </Text>
-                        <Button radius="md" size="xl">
+                        <Button component={Link} to="/resume" target="_blank" radius="md" size="xl">
                                 {introText.btnLabel}
                         </Button>
                     </Flex>
@@ -137,9 +137,6 @@ export default function Intro() {
             {/* for desktop or larger devices */}
             <MediaQuery query="(min-width: 993px)" styles={{ display: 'block' }}>
                 <Container size="100rem" px="6rem" pb="6rem" sx={{ display: 'none' }}>
-                    {/* <Title order={1} size={70}>
-                        {introText.title}
-                    </Title> */}
                     {
                         theme.colorScheme === "light" ? 
                         <Box maw="40rem">
@@ -160,7 +157,7 @@ export default function Intro() {
                             <Text size={24} mr={500} my={20}>
                                 {introText.secondPara()}
                             </Text>
-                            <Button radius="md" size="xl">
+                            <Button component={Link} to="/resume" target="_blank" radius="md" size="xl">
                                 {introText.btnLabel}
                             </Button>
                         </Box>

@@ -3,15 +3,14 @@ import { MantineProvider,
   ColorScheme,
 } from '@mantine/core';
 import { useHotkeys, useLocalStorage, useColorScheme } from '@mantine/hooks';
-import MainPage from "./pages/MainPage";
-import ResumePage from "./pages/ResumePage";
-import ColorToggle from "./components/ColorToggle";
 import { AppContextProvider } from './AppContext';
 import "./App.css";
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import ResumePage from "./pages/ResumePage";
+import MainPage from './pages/MainPage';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +22,6 @@ const router = createBrowserRouter([
     element: <ResumePage />,
   },
 ]);
-
 
 export default function App() {
   const preferredColorScheme = useColorScheme();
@@ -40,9 +38,9 @@ export default function App() {
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
       <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
+        <RouterProvider router={router} />
         <AppContextProvider>
-          <ColorToggle />
-          <RouterProvider router={router} />
+          <></>
         </AppContextProvider>
       </MantineProvider>
     </ColorSchemeProvider>
