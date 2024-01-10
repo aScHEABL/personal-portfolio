@@ -2,6 +2,7 @@ import {
     Flex,
     MediaQuery,
     ActionIcon,
+    Tooltip,
 
 } from "@mantine/core";
 import { BiLogoLinkedin } from "react-icons/bi";
@@ -21,13 +22,15 @@ export default function Sidebar() {
                             paddingLeft: "1rem",
                             paddingTop: "18rem",
                         }}>
-                    <ActionIcon size="xl" variant="transparent">
-                        <BiLogoLinkedin size="2rem" />
-                    </ActionIcon>
-                    <ActionIcon size="xl" variant="transparent">
+                    <Tooltip label="This button is currently disabled">
+                        <ActionIcon size="xl" variant="transparent" style={{ cursor: "not-allowed" }}>
+                            <BiLogoLinkedin size="2rem" />
+                        </ActionIcon>
+                    </Tooltip>
+                    <ActionIcon component="a" href="https://github.com/aScHEABL" target="_blank" size="xl" variant="transparent">
                         <BsGithub size="2rem" />
                     </ActionIcon>
-                    <ActionIcon size="xl" variant="transparent">
+                    <ActionIcon component="a" href="mailto:natothun@gmail.com?subject=Job inquiry from personal portfolio" target="_blank" size="xl" variant="transparent">
                         <AiOutlineMail size="2rem" />
                     </ActionIcon>
                 </Flex>

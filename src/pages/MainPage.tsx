@@ -1,6 +1,7 @@
 import { 
   Box,
  } from '@mantine/core';
+import ColorToggle from "../components/ColorToggle";
 import Intro from "../components/Intro";
 import Sidebar from "../components/Sidebar";
 import CustomDivider from "../components/CustomDivider";
@@ -12,6 +13,7 @@ import ContactMe from '../components/ContactMe';
 export default function MainPage() {
     return (
             <Box>
+                <ColorToggle />
                 <Sidebar />
                 <Intro />
                 <CustomDivider dividerLabel={"Some things I've built"} />
