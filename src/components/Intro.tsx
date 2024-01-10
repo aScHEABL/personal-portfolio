@@ -40,20 +40,14 @@ export default function Intro() {
             {/* for phone devices */}
             <MediaQuery query="(max-width: 425px)" styles={{ display: 'block' }}>
                 <Container size="20rem" sx={{ display: 'none' }}>
-                    {/* <Title order={1} size={40} 
-                    sx={(theme) => ({
-                        color: theme.colorScheme === "light" ? theme.colors.black : theme.colors.white
-                    })}>
-                        {introText.title}
-                    </Title> */}
                     {
                         theme.colorScheme === "light" ? 
                         <Box maw="20rem">
-                            <Image src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=50&duration=3000&pause=1000&color=000000&width=480&height=80&lines=HI%2C+I'M+JUE-MING!" alt="HI, I'M ERIC!" />
+                            <Image src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=50&duration=3000&pause=1000&color=000000&width=480&height=80&lines=HI%2C+I'M+JUE-MING!" alt="HI, I'M JUE-MING, CHEN!" />
                         </Box>
                         :
                         <Box maw="200rem">
-                            <Image src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=50&duration=3000&pause=1000&color=FFFFFF&width=480&height=80&lines=HI%2C+I'M+JUE-MING!" alt="HI, I'M ERIC!" />
+                            <Image src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=50&duration=3000&pause=1000&color=FFFFFF&width=480&height=80&lines=HI%2C+I'M+JUE-MING!" alt="HI, JUE-MING, CHEN!" />
                         </Box>
                     }
                     <Title order={2} size="1.3rem" mb={25}>
@@ -73,17 +67,14 @@ export default function Intro() {
             </MediaQuery>
             <MediaQuery query="(max-width: 767px) and (min-width: 426px)" styles={{ display: 'block' }}>
                 <Container size="100rem" pl="2rem" pr="6rem" sx={{ display: 'none' }}>
-                    {/* <Title order={1} size={35}>
-                        {introText.title}
-                    </Title> */}
                     {
                         theme.colorScheme === "light" ? 
                         <Box maw="20rem">
-                            <Image src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=60&duration=3000&pause=1000&color=000000&vCenter=true&repeat=false&width=500&height=60&lines=HI%2C+I'M+ERIC!" alt="HI, I'M ERIC!" />
+                            <Image src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=60&duration=3000&pause=1000&color=000000&vCenter=true&repeat=false&width=820&height=60&lines=HI%2C+I'M+JUE-MING,+CHEN!" alt="HI, I'M ERIC!" />
                         </Box>
                         :
                         <Box maw="20rem">
-                            <Image src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=60&duration=3000&pause=1000&color=FFFFFF&vCenter=true&repeat=false&width=500&height=60&lines=HI%2C+I'M+ERIC!" alt="HI, I'M ERIC!" />
+                            <Image src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=60&duration=3000&pause=1000&color=FFFFFF&vCenter=true&repeat=false&width=820&height=60&lines=HI%2C+I'M+JUE-MING,+CHEN!" alt="HI, I'M ERIC!" />
                         </Box>
                     }
                     <Title order={2} size={20} mb={48}>
@@ -105,17 +96,14 @@ export default function Intro() {
             </MediaQuery>
             <MediaQuery query="(max-width: 992px) and (min-width: 768px)" styles={{ display: 'block' }}>
                 <Container size="100rem" pl="4rem" pr="8rem" sx={{ display: 'none' }}>
-                    {/* <Title order={1} size={70}>
-                        {introText.title}
-                    </Title> */}
                     {
                         theme.colorScheme === "light" ? 
                         <Box maw="20rem">
-                            <Image src="https://readme-typing-svg.demolab.com?font=Roboto&weight=800&size=60&duration=1500&pause=1000&color=000000&vCenter=true&repeat=false&width=500&height=60&lines=HI%2C+I'M+JUE-MING!" alt="HI, I'M ERIC!" />
+                            <Image src="https://readme-typing-svg.demolab.com?font=Roboto&weight=800&size=60&duration=1500&pause=1000&color=000000&vCenter=true&repeat=false&width=800&height=60&lines=HI%2C+I'M+JUE-MING,+CHEN!" alt="HI, I'M ERIC!" />
                         </Box>
                         :
                         <Box maw="20rem">
-                            <Image src="https://readme-typing-svg.demolab.com?font=Roboto&weight=800&size=60&duration=1500&pause=1000&color=FFFFFF&vCenter=true&repeat=false&width=500&height=60&lines=HI%2C+I'M+JUE-MING!" alt="HI, I'M ERIC!" />
+                            <Image src="https://readme-typing-svg.demolab.com?font=Roboto&weight=800&size=60&duration=1500&pause=1000&color=FFFFFF&vCenter=true&repeat=false&width=800&height=60&lines=HI%2C+I'M+JUE-MING,+CHEN!" alt="HI, I'M ERIC!" />
                         </Box>
                     }
                     <Title order={2} size={20} mb={48}>
@@ -140,11 +128,11 @@ export default function Intro() {
                     {
                         theme.colorScheme === "light" ? 
                         <Box maw="40rem">
-                            <Image src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=40&duration=1500&pause=1000&color=000000&vCenter=true&repeat=false&width=450&height=40&lines=HI%2C+I'M+ERIC!" alt="HI, I'M ERIC!" />
+                            <Image src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=40&duration=1500&pause=1000&color=000000&vCenter=true&repeat=false&width=650&height=40&lines=HI%2C+I'M+JUE-MING,+CHEN!" alt="HI, I'M ERIC!" />
                         </Box>
                         :
                         <Box maw="40rem">
-                            <Image src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=40&duration=1500&pause=1000&color=FFFFFF&vCenter=true&repeat=false&width=450&height=40&lines=HI%2C+I'M+ERIC!" alt="HI, I'M ERIC!" />
+                            <Image src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=40&duration=1500&pause=1000&color=FFFFFF&vCenter=true&repeat=false&width=650&height=40&lines=HI%2C+I'M+JUE-MING,+CHEN!" alt="HI, I'M ERIC!" />
                         </Box>
                     }
                     <Title order={2} size={20} mb={48}>
