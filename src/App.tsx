@@ -32,10 +32,10 @@ export default function App() {
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
       <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
-        <AppContextProvider>
-          <RouterProvider router={router} />
-          <></>
-        </AppContextProvider>
+        <RouterProvider router={router} />
+          <AppContextProvider>
+            <></>
+          </AppContextProvider>
       </MantineProvider>
     </ColorSchemeProvider>
   )  
