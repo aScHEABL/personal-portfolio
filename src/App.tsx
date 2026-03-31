@@ -13,15 +13,13 @@ import ResumePage from "./pages/ResumePage";
 import MainPage from './pages/MainPage';
 
 const router = createBrowserRouter([
+  { path: "/",  element: <MainPage />,  },
+  { path: "/resume",  element: <ResumePage />,  },
+], 
   {
-    path: "/",
-    element: <MainPage />,
-  },
-  {
-    path: "/resume",
-    element: <ResumePage />,
-  },
-]);
+    basename: "/personal-portfolio",
+  }
+);
 
 export default function App() {
   const preferredColorScheme = useColorScheme();
